@@ -1,0 +1,14 @@
+.div-hero-section {
+    height: 80vh;
+    margin-top: 2em;
+    // width: 100%;
+    background-image: url("../images/illustration-working.svg");
+    background-size: 80% contain;
+    background-repeat: no-repeat;
+    background-position: top 0px right -200px;
+}
+
+.hero-section-contents {
+    padding-top: 4vh;
+    padding-left: $desktop-padding-side;
+}

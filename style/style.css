@@ -73,6 +73,20 @@ button {
           transform: scale(1.1);
 }
 
+.div-hero-section {
+  height: 80vh;
+  margin-top: 2em;
+  background-image: url("../images/illustration-working.svg");
+  background-size: 80% contain;
+  background-repeat: no-repeat;
+  background-position: top 0px right -200px;
+}
+
+.hero-section-contents {
+  padding-top: 4vh;
+  padding-left: 8vw;
+}
+
 *,
 *::after,
 *::before {
