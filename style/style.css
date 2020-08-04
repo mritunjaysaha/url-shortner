@@ -9,6 +9,14 @@
 body {
   background-color: #fff;
   color: #9e9aa7;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h3 {
+  color: #3b3054;
+  font-weight: 700;
 }
 
 .attribution {
@@ -23,6 +31,7 @@ body {
 
 button {
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .btn-normal {
@@ -36,7 +45,7 @@ button {
   color: #fff;
   padding: 1em 2em;
   background-color: #2acfcf;
-  border-radius: 20px;
+  border-radius: 25px;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
 }
@@ -63,6 +72,7 @@ button {
           justify-content: space-between;
   height: 10vh;
   padding: 0 8vw;
+  font-size: 14px;
 }
 
 .nav .nav-left {
@@ -80,6 +90,10 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.nav .nav-left p {
+  line-height: 18px;
 }
 
 .nav .nav-right {
@@ -106,7 +120,23 @@ button {
 }
 
 .hero-section-contents {
-  padding-top: 4vh;
   padding-left: 8vw;
+  position: relative;
+  width: 50vw;
+}
+
+.hero-section-contents h3 {
+  font-size: 4em;
+  line-height: 1.2em;
+}
+
+.hero-section-contents p {
+  margin-top: -10vh;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+}
+
+.hero-section-contents .btn-blue {
+  letter-spacing: 0.1em;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,22 @@
 }
 
 .hero-section-contents {
-    padding-top: 4vh;
+    // padding-top: 2vh;
     padding-left: $desktop-padding-side;
+    position: relative;
+    width: 50vw;
+
+    h3 {
+        font-size: 4em;
+        line-height: 1.2em;
+    }
+    p {
+        margin-top: -10vh;
+        line-height: 2em;
+        letter-spacing: 0.1em;
+    }
+
+    .btn-blue {
+        letter-spacing: 0.1em;
+    }
 }
