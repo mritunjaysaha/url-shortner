@@ -1,0 +1,33 @@
+@import "./variables";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $Gray;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+    
+    .nav-left {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
