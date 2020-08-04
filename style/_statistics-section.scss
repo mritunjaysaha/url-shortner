@@ -1,0 +1,85 @@
+.statistics-section {
+    height: max-content;
+    background-color: $Gray;
+    text-align: center;
+    padding: 10vh 0;
+    p {
+        color: $GrayishViolet;
+    }
+
+    .statistics-contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            width: 38vw;
+        }
+    }
+    .cards-logo {
+        position: relative;
+        top: -50px;
+        background-color: $DarkViolet;
+        width: max-content;
+        padding: 1.2em;
+        border-radius: 50%;
+
+        img {
+            display: block;
+            height: 1.5em;
+            width: 1.5em;
+        }
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10vh;
+
+        .cards-with-connector {
+            // margin-right: 2em;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .connector-1,
+        .connector-2 {
+            height: 10px;
+            width: 2em;
+            background-color: $Cyan;
+            align-items: center;
+            justify-content: center;
+            margin-top: 17vh;
+        }
+
+        .cards-1,
+        .cards-2,
+        .cards-3 {
+            background-color: #fff;
+            width: 20vw;
+            height: max-content;
+            padding: 1em;
+            text-align: left;
+
+            .cards-contents {
+                margin-top: -8vh;
+                h5 {
+                    color: $VeryDarkViolet;
+                }
+                p {
+                    margin-top: -2vh;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .cards-2 {
+            margin-top: 2em;
+        }
+
+        .cards-3 {
+            margin-top: 4em;
+        }
+    }
+}

@@ -12,6 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 500;
+  margin: 0;
 }
 
 h3 {
@@ -111,7 +112,7 @@ button {
 }
 
 .div-hero-section {
-  height: 80vh;
+  height: 70vh;
   margin-top: 2em;
   background-image: url("../images/illustration-working.svg");
   background-size: 80% contain;
@@ -138,5 +139,132 @@ button {
 
 .hero-section-contents .btn-blue {
   letter-spacing: 0.1em;
+}
+
+.statistics-section {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #d9d9d9;
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.statistics-section p {
+  color: #9e9aa7;
+}
+
+.statistics-section .statistics-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.statistics-section .statistics-contents p {
+  width: 38vw;
+}
+
+.statistics-section .cards-logo {
+  position: relative;
+  top: -50px;
+  background-color: #3b3054;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.2em;
+  border-radius: 50%;
+}
+
+.statistics-section .cards-logo img {
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.statistics-section .cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10vh;
+}
+
+.statistics-section .cards-container .cards-with-connector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.statistics-section .cards-container .connector-1,
+.statistics-section .cards-container .connector-2 {
+  height: 10px;
+  width: 2em;
+  background-color: #2acfcf;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 17vh;
+}
+
+.statistics-section .cards-container .cards-1,
+.statistics-section .cards-container .cards-2,
+.statistics-section .cards-container .cards-3 {
+  background-color: #fff;
+  width: 20vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 1em;
+  text-align: left;
+}
+
+.statistics-section .cards-container .cards-1 .cards-contents,
+.statistics-section .cards-container .cards-2 .cards-contents,
+.statistics-section .cards-container .cards-3 .cards-contents {
+  margin-top: -8vh;
+}
+
+.statistics-section .cards-container .cards-1 .cards-contents h5,
+.statistics-section .cards-container .cards-2 .cards-contents h5,
+.statistics-section .cards-container .cards-3 .cards-contents h5 {
+  color: #232127;
+}
+
+.statistics-section .cards-container .cards-1 .cards-contents p,
+.statistics-section .cards-container .cards-2 .cards-contents p,
+.statistics-section .cards-container .cards-3 .cards-contents p {
+  margin-top: -2vh;
+  font-size: 13px;
+}
+
+.statistics-section .cards-container .cards-2 {
+  margin-top: 2em;
+}
+
+.statistics-section .cards-container .cards-3 {
+  margin-top: 4em;
 }
 /*# sourceMappingURL=style.css.map */
