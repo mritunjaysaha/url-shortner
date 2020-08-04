@@ -1,24 +1,8 @@
-@import "./variables";
-@import "./navbar";
-@import "./button";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+@import "./abstract/variables";
+
+@import "./home";
+@import "./components/button";
+@import "./components/navbar";
 @import "./hero-section";
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #fff;
-    color: $GrayishViolet;
-}
-
-.attribution {
-    display: none;
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
