@@ -1,4 +1,6 @@
 @import "./variables";
+@import "./navbar";
+@import "./button";
 
 *,
 *::after,
@@ -7,19 +9,8 @@
 }
 
 body {
-    background-color: $Gray;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 10vh;
-    
-    .nav-left {
-        display: flex;
-        flex-direction: row;
-    }
+    background-color: #fff;
+    color: $GrayishViolet;
 }
 
 .attribution {

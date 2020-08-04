@@ -1,0 +1,20 @@
+button {
+    cursor: pointer;
+}
+.btn-normal {
+    background: none;
+    border: none;
+    color: $GrayishViolet;
+}
+.btn-blue {
+    border: none;
+    color: #fff;
+    padding: 1em 2em;
+    background-color: $Cyan;
+    border-radius: 20px;
+    transition: 0.5s linear;
+    &:hover {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}

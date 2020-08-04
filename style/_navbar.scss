@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 $desktop-padding-side;
+    .nav-left {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-right {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
