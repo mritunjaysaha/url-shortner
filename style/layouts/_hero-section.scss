@@ -36,6 +36,11 @@
         letter-spacing: 0.1em;
     }
 
+    @include respond(tablet) {
+        padding-top: 40vh;
+        background-color: #f00;
+    }
+
     @include respond(mobile) {
         width: 100%;
         height: max-content;

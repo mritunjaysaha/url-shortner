@@ -35,6 +35,10 @@
         color: #fff;
     }
 
+    @include respond(tablet) {
+        background-image: none;
+    }
+
     @include respond(mobile) {
         position: relative;
         top: 10vh;
