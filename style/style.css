@@ -292,4 +292,50 @@ button {
 .boost-section h3 {
   color: #fff;
 }
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #232127;
+  padding: 2em 8em 0 8em;
+}
+
+footer img {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+footer .logo {
+  color: #fff;
+}
+
+footer .social-logos {
+  padding-top: 1.5em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+footer .social-logos img {
+  margin-right: 1em;
+}
+
+footer .info h5 {
+  color: #fff;
+}
+
+footer .info p {
+  font-size: 14px;
+  line-height: 1em;
+}
 /*# sourceMappingURL=style.css.map */
