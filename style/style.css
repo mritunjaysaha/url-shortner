@@ -39,6 +39,14 @@ button {
   background: none;
   border: none;
   color: #9e9aa7;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.btn-normal:hover {
+  color: #35323e;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .btn-blue {
@@ -367,8 +375,8 @@ footer .info p {
   padding: 2em;
   border-radius: 5px;
   z-index: 10;
-  position: relative;
-  top: 12vh;
+  position: absolute;
+  top: 77vh;
 }
 
 .url-shortner input,
@@ -405,24 +413,26 @@ footer .info p {
   color: #fff;
 }
 
-.nav .nav-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav .nav-right div {
-  height: 2px;
-  width: 24px;
-  border-radius: 5px;
-  background-color: #232127;
+@media only screen and (max-width: 600px) {
+  .nav .nav-right {
+    background-color: #ff0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav .nav-right div {
+    height: 2px;
+    width: 24px;
+    border-radius: 5px;
+    background-color: #232127;
+  }
 }
 /*# sourceMappingURL=style.css.map */
