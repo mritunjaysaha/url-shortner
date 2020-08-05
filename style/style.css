@@ -533,6 +533,7 @@ footer .info p {
   z-index: 10;
   position: absolute;
   top: 77vh;
+  width: 80vw;
 }
 
 .url-shortner input,
@@ -544,7 +545,7 @@ footer .info p {
 }
 
 .url-shortner input {
-  width: 70vw;
+  width: 84%;
 }
 
 .url-shortner input::-webkit-input-placeholder {
@@ -568,6 +569,7 @@ footer .info p {
 }
 
 .url-shortner button {
+  width: 14%;
   padding: 0 1em;
   background-color: #2acfcf;
   color: #fff;

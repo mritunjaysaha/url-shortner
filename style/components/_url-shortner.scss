@@ -10,6 +10,8 @@
     z-index: 10;
     position: absolute;
     top: 77vh;
+    width: 80vw;
+
     input,
     button {
         height: 3em;
@@ -19,8 +21,7 @@
     }
 
     input {
-        width: 70vw;
-
+        width: 84%;
         &::placeholder {
             padding-left: 1em;
             font-weight: 500;
@@ -28,13 +29,13 @@
     }
 
     button {
+        width: 14%;
         padding: 0 1em;
         background-color: $Cyan;
         color: #fff;
     }
 
     @include respond(mobile) {
-        // display: none;
         position: relative;
         top: 10vh;
         padding: 1em;
