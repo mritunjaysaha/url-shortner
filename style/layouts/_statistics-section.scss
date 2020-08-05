@@ -83,6 +83,7 @@
     }
 
     @include respond(mobile) {
+        // padding-top: 8em;
         .statistics-contents {
             h3 {
                 font-size: 1.5em;

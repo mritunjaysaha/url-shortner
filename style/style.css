@@ -164,6 +164,7 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 10vh;
   }
 }
 
@@ -547,18 +548,22 @@ footer .info p {
 
 .url-shortner input::-webkit-input-placeholder {
   padding-left: 1em;
+  font-weight: 500;
 }
 
 .url-shortner input:-ms-input-placeholder {
   padding-left: 1em;
+  font-weight: 500;
 }
 
 .url-shortner input::-ms-input-placeholder {
   padding-left: 1em;
+  font-weight: 500;
 }
 
 .url-shortner input::placeholder {
   padding-left: 1em;
+  font-weight: 500;
 }
 
 .url-shortner button {
@@ -569,9 +574,27 @@ footer .info p {
 
 @media only screen and (max-width: 600px) {
   .url-shortner {
-    display: none;
     position: relative;
-    top: 0;
+    top: 18vh;
+    padding: 1em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 8vw;
+  }
+  .url-shortner input,
+  .url-shortner button {
+    width: 100%;
+  }
+  .url-shortner button {
+    margin-top: 1em;
   }
 }
 
