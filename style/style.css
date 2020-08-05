@@ -153,7 +153,8 @@ button {
 @media only screen and (max-width: 600px) {
   .hero-section {
     margin-top: 0;
-    background-image: none;
+    background-size: 120%;
+    background-position: top 20px right -100px;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -206,6 +207,7 @@ button {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    padding-top: 50vh;
   }
   .hero-section-contents img {
     position: relative;

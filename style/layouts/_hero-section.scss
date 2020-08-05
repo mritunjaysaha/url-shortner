@@ -9,11 +9,11 @@
 
     @include respond(mobile) {
         margin-top: 0;
-        background-image: none;
+        background-size: 120%;
+        background-position: top 20px right -100px;
         height: max-content;
         display: flex;
         flex-direction: column;
-        // margin-bottom: -2em;
     }
 }
 
@@ -44,6 +44,7 @@
         padding: 1em;
         align-items: center;
         text-align: center;
+        padding-top: 50vh;
         img {
             position: relative;
             padding-top: 2em;
