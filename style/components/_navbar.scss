@@ -25,4 +25,13 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    .desktop {
+        display: none !important;
+    }
+    @include respond(mobile) {
+        .desktop {
+            display: none;
+        }
+    }
 }

@@ -111,6 +111,16 @@ button {
           justify-content: space-evenly;
 }
 
+.nav .desktop {
+  display: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav .desktop {
+    display: none;
+  }
+}
+
 .hero-section {
   height: 70vh;
   margin-top: 2em;
@@ -393,5 +403,26 @@ footer .info p {
   padding: 0 1em;
   background-color: #2acfcf;
   color: #fff;
+}
+
+.nav .nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-right div {
+  height: 2px;
+  width: 24px;
+  border-radius: 5px;
+  background-color: #232127;
 }
 /*# sourceMappingURL=style.css.map */
