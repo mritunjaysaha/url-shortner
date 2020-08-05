@@ -80,8 +80,15 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 10vh;
-  padding: 2em 8vw;
+  padding: 0 8vw;
   font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    background-color: #f00;
+    padding: 1em 1em 1em 2em;
+  }
 }
 
 .nav .nav-left {
@@ -124,6 +131,11 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
+  .nav {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
   .nav .desktop {
     display: none;
   }
@@ -137,6 +149,21 @@ button {
   background-repeat: no-repeat;
   background-position: top 0px right -200px;
   z-index: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-section {
+    margin-top: 0;
+    background-color: #ff0;
+    background-image: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .hero-section-contents {
@@ -158,6 +185,45 @@ button {
 
 .hero-section-contents .btn-blue {
   letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-section-contents {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #f00;
+    padding: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .hero-section-contents img {
+    position: relative;
+    padding-top: 2em;
+    width: 120vw;
+    left: 60px;
+  }
+  .hero-section-contents h3 {
+    margin: 0;
+    padding-top: 1em;
+    font-size: 2em;
+  }
+  .hero-section-contents p {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .hero-section-contents .btn-blue {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 
 .statistics-section {
@@ -415,7 +481,6 @@ footer .info p {
 
 @media only screen and (max-width: 600px) {
   .nav .nav-right {
-    background-color: #ff0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -423,16 +488,16 @@ footer .info p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 30px;
+    height: 32px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .nav .nav-right div {
-    height: 2px;
+    height: 3px;
     width: 24px;
     border-radius: 5px;
-    background-color: #232127;
+    background-color: #9e9aa7;
   }
 }
 /*# sourceMappingURL=style.css.map */

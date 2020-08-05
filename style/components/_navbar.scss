@@ -4,8 +4,13 @@
     align-items: center;
     justify-content: space-between;
     height: 10vh;
-    padding: 2em $desktop-padding-side;
+    padding: 0 $desktop-padding-side;
     font-size: 14px;
+
+    @include respond(mobile) {
+        background-color: #f00;
+        padding: 1em 1em 1em 2em;
+    }
 
     .nav-left {
         width: 40%;
@@ -33,5 +38,7 @@
         .desktop {
             display: none;
         }
+
+        height: max-content;
     }
 }
