@@ -38,19 +38,18 @@
         margin-top: 10vh;
 
         .cards-with-connector {
-            // margin-right: 2em;
             display: flex;
             flex-direction: row;
         }
 
         .connector-1,
         .connector-2 {
-            height: 10px;
+            height: 8px;
             width: 2em;
             background-color: $Cyan;
             align-items: center;
             justify-content: center;
-            margin-top: 17vh;
+            margin-top: 14vh;
         }
 
         .cards-1,

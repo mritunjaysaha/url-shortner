@@ -1,0 +1,14 @@
+.boost-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em 0 2em 0;
+    background-color: $DarkViolet;
+    background-image: url("../../images/bg-boost-desktop.svg");
+    background-size: cover;
+    h3 {
+        color: #fff;
+    }
+}

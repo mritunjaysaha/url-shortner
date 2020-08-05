@@ -72,7 +72,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 10vh;
-  padding: 0 8vw;
+  padding: 2em 8vw;
   font-size: 14px;
 }
 
@@ -217,7 +217,7 @@ button {
 
 .statistics-section .cards-container .connector-1,
 .statistics-section .cards-container .connector-2 {
-  height: 10px;
+  height: 8px;
   width: 2em;
   background-color: #2acfcf;
   -webkit-box-align: center;
@@ -226,7 +226,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 17vh;
+  margin-top: 14vh;
 }
 
 .statistics-section .cards-container .cards-1,
@@ -266,5 +266,30 @@ button {
 
 .statistics-section .cards-container .cards-3 {
   margin-top: 4em;
+}
+
+.boost-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 1em 0 2em 0;
+  background-color: #3b3054;
+  background-image: url("../../images/bg-boost-desktop.svg");
+  background-size: cover;
+}
+
+.boost-section h3 {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,8 +2,9 @@
 
 @import "./abstract/variables";
 
-@import "./home";
+@import "./layouts/home";
 @import "./components/button";
 @import "./components/navbar";
-@import "./hero-section";
-@import "./statistics-section";
+@import "./layouts/hero-section";
+@import "./layouts/statistics-section";
+@import "./layouts/boost-section";
