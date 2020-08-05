@@ -111,13 +111,14 @@ button {
           justify-content: space-evenly;
 }
 
-.div-hero-section {
+.hero-section {
   height: 70vh;
   margin-top: 2em;
   background-image: url("../images/illustration-working.svg");
   background-size: 80% contain;
   background-repeat: no-repeat;
   background-position: top 0px right -200px;
+  z-index: 0;
 }
 
 .hero-section-contents {
@@ -306,7 +307,7 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #232127;
-  padding: 2em 8em 0 8em;
+  padding: 2em 8vw;
 }
 
 footer img {
@@ -337,5 +338,60 @@ footer .info h5 {
 footer .info p {
   font-size: 14px;
   line-height: 1em;
+}
+
+.url-shortner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #3b3054;
+  background-image: url("../../images/bg-shorten-desktop.svg");
+  margin: 2em 8vw;
+  padding: 2em;
+  border-radius: 5px;
+  z-index: 10;
+  position: relative;
+  top: 12vh;
+}
+
+.url-shortner input,
+.url-shortner button {
+  height: 3em;
+  border-radius: 5px;
+  margin: 0;
+  border: none;
+}
+
+.url-shortner input {
+  width: 70vw;
+}
+
+.url-shortner input::-webkit-input-placeholder {
+  padding-left: 1em;
+}
+
+.url-shortner input:-ms-input-placeholder {
+  padding-left: 1em;
+}
+
+.url-shortner input::-ms-input-placeholder {
+  padding-left: 1em;
+}
+
+.url-shortner input::placeholder {
+  padding-left: 1em;
+}
+
+.url-shortner button {
+  padding: 0 1em;
+  background-color: #2acfcf;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

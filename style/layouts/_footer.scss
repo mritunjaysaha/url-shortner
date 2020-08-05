@@ -4,7 +4,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     background-color: $VeryDarkViolet;
-    padding: 2em 8em 0 8em;
+    padding: 2em $desktop-padding-side;
     img {
         height: max-content;
     }

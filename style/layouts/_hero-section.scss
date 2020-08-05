@@ -1,10 +1,11 @@
-.div-hero-section {
+.hero-section {
     height: 70vh;
     margin-top: 2em;
     background-image: url("../images/illustration-working.svg");
     background-size: 80% contain;
     background-repeat: no-repeat;
     background-position: top 0px right -200px;
+    z-index: 0;
 }
 
 .hero-section-contents {
