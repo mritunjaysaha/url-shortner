@@ -12,3 +12,16 @@
 @import "./layouts/footer";
 @import "./components/url-shortner";
 @import "./components/navbar-mobile";
+
+.mobile {
+    display: none;
+}
+
+@include respond(mobile) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+    }
+}

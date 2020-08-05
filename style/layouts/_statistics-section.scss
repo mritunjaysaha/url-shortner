@@ -81,4 +81,63 @@
             margin-top: 4em;
         }
     }
+
+    @include respond(mobile) {
+        .statistics-contents {
+            h3 {
+                font-size: 1.5em;
+            }
+            p {
+                width: 100%;
+                padding: 0 1em;
+                margin: 0;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+        .cards-logo {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .cards-container {
+            flex-direction: column;
+            align-items: center;
+
+            .cards-container {
+                flex-direction: column;
+            }
+
+            .cards-with-connector {
+                flex-direction: column;
+            }
+            .connector-1,
+            .connector-2 {
+                position: relative;
+                top: -4px;
+                margin: 0 auto;
+                width: 4em;
+                transform: rotate(90deg);
+                z-index: 0;
+            }
+            .cards-1,
+            .cards-2,
+            .cards-3 {
+                width: 90%;
+                margin: 2em 1em;
+                border-radius: 5px;
+                z-index: 10;
+                .cards-contents {
+                    text-align: center;
+                    h5 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
 }

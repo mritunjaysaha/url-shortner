@@ -9,9 +9,8 @@
 
     @include respond(mobile) {
         margin-top: 0;
-        background-color: #ff0;
         background-image: none;
-
+        height: max-content;
         display: flex;
         flex-direction: column;
     }
@@ -38,9 +37,9 @@
 
     @include respond(mobile) {
         width: 100%;
+        height: max-content;
         display: flex;
         flex-direction: column;
-        background-color: #f00;
         padding: 1em;
         align-items: center;
         text-align: center;

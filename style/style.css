@@ -86,7 +86,6 @@ button {
 
 @media only screen and (max-width: 600px) {
   .nav {
-    background-color: #f00;
     padding: 1em 1em 1em 2em;
   }
 }
@@ -154,8 +153,10 @@ button {
 @media only screen and (max-width: 600px) {
   .hero-section {
     margin-top: 0;
-    background-color: #ff0;
     background-image: none;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -190,6 +191,9 @@ button {
 @media only screen and (max-width: 600px) {
   .hero-section-contents {
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -197,7 +201,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #f00;
     padding: 1em;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -353,6 +356,77 @@ button {
   margin-top: 4em;
 }
 
+@media only screen and (max-width: 600px) {
+  .statistics-section .statistics-contents h3 {
+    font-size: 1.5em;
+  }
+  .statistics-section .statistics-contents p {
+    width: 100%;
+    padding: 0 1em;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  .statistics-section .cards-logo {
+    position: relative;
+    margin: 0 auto;
+  }
+  .statistics-section .cards-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .statistics-section .cards-container .cards-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .cards-container .cards-with-connector {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .cards-container .connector-1,
+  .statistics-section .cards-container .connector-2 {
+    position: relative;
+    top: -4px;
+    margin: 0 auto;
+    width: 4em;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    z-index: 0;
+  }
+  .statistics-section .cards-container .cards-1,
+  .statistics-section .cards-container .cards-2,
+  .statistics-section .cards-container .cards-3 {
+    width: 90%;
+    margin: 2em 1em;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  .statistics-section .cards-container .cards-1 .cards-contents,
+  .statistics-section .cards-container .cards-2 .cards-contents,
+  .statistics-section .cards-container .cards-3 .cards-contents {
+    text-align: center;
+  }
+  .statistics-section .cards-container .cards-1 .cards-contents h5,
+  .statistics-section .cards-container .cards-2 .cards-contents h5,
+  .statistics-section .cards-container .cards-3 .cards-contents h5 {
+    font-size: 18px;
+  }
+  .statistics-section .cards-container .cards-1 .cards-contents p,
+  .statistics-section .cards-container .cards-2 .cards-contents p,
+  .statistics-section .cards-container .cards-3 .cards-contents p {
+    font-size: 16px;
+  }
+}
+
 .boost-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,6 +554,14 @@ footer .info p {
 }
 
 @media only screen and (max-width: 600px) {
+  .url-shortner {
+    display: none;
+    position: relative;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .nav .nav-right {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -498,6 +580,21 @@ footer .info p {
     width: 24px;
     border-radius: 5px;
     background-color: #9e9aa7;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */

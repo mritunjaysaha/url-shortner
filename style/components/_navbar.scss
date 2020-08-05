@@ -8,7 +8,6 @@
     font-size: 14px;
 
     @include respond(mobile) {
-        background-color: #f00;
         padding: 1em 1em 1em 2em;
     }
 

@@ -31,4 +31,11 @@
         background-color: $Cyan;
         color: #fff;
     }
+
+    @include respond(mobile) {
+        display: none;
+
+        position: relative;
+        top: 0;
+    }
 }
