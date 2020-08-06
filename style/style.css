@@ -742,6 +742,7 @@ footer .info p {
             flex-direction: column;
     padding: 0 1em;
     text-align: left;
+    top: 80vh;
   }
   .shortened-links .links {
     min-width: 100%;
