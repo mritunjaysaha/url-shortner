@@ -4,11 +4,13 @@
  * @param {id} inputEL input for the url
  * @param {id} shortenBtn button to generate the shorten link
  */
+
 function ShortenURL(el, inputEL, shortenBtn) {
     this.el = document.querySelector(el);
     this.input = document.querySelector(inputEL);
     this.shortenBtn = document.querySelector(shortenBtn);
 
+    this.btnNumber = 0;
     this.url = "";
     this.shortenedUrl = "";
 
@@ -34,6 +36,8 @@ ShortenURL.prototype.generateLink = async function (url) {
     const hashid = processedRes.hashid;
     console.log(hashid);
     this.shortenedUrl = `https://rel.ink/${hashid}`;
+
+    this.createComponent();
 };
 
 ShortenURL.prototype.bindEvents = function () {
@@ -43,10 +47,50 @@ ShortenURL.prototype.bindEvents = function () {
     });
 
     this.shortenBtn.addEventListener("click", (e) => {
-        console.log("clicked");
         this.generateLink(this.url);
-        this.createComponent();
     });
+
+    this.el.addEventListener("click", (e) => {
+        const linkNumber = e.target.dataset["number"];
+        const link = document.querySelector(`p[data-link="${linkNumber}"]`);
+        console.log(linkNumber);
+        console.log(link);
+
+        if (this.copyToClipboard(link)) {
+            console.log("copied");
+            this.changeButtonText(linkNumber);
+        } else {
+            console.log("sahdkas");
+        }
+    });
+};
+
+/**
+ *
+ * @param {<p></p>} shortURLNode
+ */
+ShortenURL.prototype.copyToClipboard = function (shortURLNode) {
+    try {
+        const range = document.createRange();
+        window.getSelection().removeAllRanges();
+        range.selectNode(shortURLNode);
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+        return true;
+    } catch (err) {
+        return false;
+    }
+};
+
+ShortenURL.prototype.changeButtonText = function (btnDataSet) {
+    const btn = document.querySelector(`button[data-number='${btnDataSet}']`);
+    btn.classList.add("add-violet");
+    btn.innerText = "Copied!";
+
+    setTimeout(function () {
+        btn.classList.remove("add-violet");
+    }, 2000);
 };
 
 ShortenURL.prototype.createComponent = function () {
@@ -54,7 +98,7 @@ ShortenURL.prototype.createComponent = function () {
     container.classList.add("shortened-links");
 
     const link = document.createElement("p");
-    link.innerText = "https://mritunjaysaha.netlify.app";
+    link.innerText = this.url;
     link.classList.add("links");
 
     container.appendChild(link);
@@ -63,19 +107,28 @@ ShortenURL.prototype.createComponent = function () {
     linkandbtn.classList.add("shortened-links-btn");
 
     const shortlink = document.createElement("p");
-    shortlink.innerText = "https://rel.ink/sjhdkja";
+    shortlink.innerText = this.shortenedUrl;
     shortlink.classList.add("links");
     shortlink.classList.add("blue");
+    shortlink.dataset["link"] = this.btnNumber;
 
     linkandbtn.appendChild(shortlink);
 
     const copybtn = document.createElement("button");
     copybtn.classList.add("btn-copy");
     copybtn.innerText = "Copy";
+    copybtn.dataset["number"] = this.btnNumber;
+    this.btnNumber++;
 
     linkandbtn.appendChild(copybtn);
 
     container.appendChild(linkandbtn);
     this.el.appendChild(container);
 };
-new ShortenURL("#shortened-links-container", "#url-input", "#shorten-btn");
+
+new ShortenURL(
+    "#shortened-links-container",
+    "#url-input",
+    "#shorten-btn",
+    ".shortened-links"
+);

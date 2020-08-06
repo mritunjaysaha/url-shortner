@@ -330,6 +330,7 @@ button {
   height: max-content;
   padding: 1em;
   text-align: left;
+  border-radius: 5px;
 }
 
 .statistics-section .cards-container .cards-1 .cards-contents,
@@ -587,6 +588,10 @@ footer .info p {
   color: #fff;
   border: none;
   border-radius: 5px;
+}
+
+.add-violet {
+  background: #3b3054 !important;
 }
 
 .url-shortner {
