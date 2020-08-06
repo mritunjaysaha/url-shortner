@@ -5,6 +5,7 @@
     background-size: 80% contain;
     background-repeat: no-repeat;
     background-position: top 0px right -200px;
+
     z-index: 0;
 
     @include respond(mobile) {
@@ -14,6 +15,7 @@
         height: max-content;
         display: flex;
         flex-direction: column;
+        padding-bottom: 3em;
     }
 }
 

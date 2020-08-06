@@ -68,6 +68,7 @@ ShortenURL.prototype.bindEvents = function () {
 /**
  *
  * @param {<p></p>} shortURLNode
+ * @returns {bool}
  */
 ShortenURL.prototype.copyToClipboard = function (shortURLNode) {
     try {
