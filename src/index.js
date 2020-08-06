@@ -90,6 +90,7 @@ ShortenURL.prototype.changeButtonText = function (btnDataSet) {
 
     setTimeout(function () {
         btn.classList.remove("add-violet");
+        btn.innerText = "Copy";
     }, 2000);
 };
 
@@ -126,9 +127,4 @@ ShortenURL.prototype.createComponent = function () {
     this.el.appendChild(container);
 };
 
-new ShortenURL(
-    "#shortened-links-container",
-    "#url-input",
-    "#shorten-btn",
-    ".shortened-links"
-);
+new ShortenURL("#shortened-links-container", "#url-input", "#shorten-btn");
