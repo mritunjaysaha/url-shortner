@@ -1,17 +1,59 @@
+.url-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 77vh;
+
+    margin: 2em $desktop-padding-side;
+    width: 83vw;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#shortened-links-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.shortened-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5em 0;
+    padding: 0 1em;
+    background-color: #fff;
+    border-radius: 5px;
+
+    .links {
+        color: $VeryDarkViolet;
+    }
+    .blue {
+        color: $Cyan;
+    }
+    .shortened-links-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .btn-copy {
+            height: 3em;
+            width: 6em;
+            margin-left: 1em;
+            background-color: $Cyan;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
+
 .url-shortner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: $DarkViolet;
     background-image: url("../../images/bg-shorten-desktop.svg");
-    margin: 2em $desktop-padding-side;
     padding: 2em;
     border-radius: 5px;
-    z-index: 10;
-    position: absolute;
-    top: 77vh;
-    width: 80vw;
-
     input,
     button {
         height: 3em;
@@ -22,7 +64,8 @@
 
     input {
         width: 84%;
-        &::placeholder {
+        &::placeholder,
+        &:focus {
             padding-left: 1em;
             font-weight: 500;
         }

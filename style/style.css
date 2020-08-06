@@ -16,7 +16,7 @@ body {
 }
 
 h3 {
-  color: #3b3054;
+  color: #232127;
   font-weight: 700;
 }
 
@@ -232,12 +232,13 @@ button {
 }
 
 .statistics-section {
+  position: relative;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   background-color: #d9d9d9;
   text-align: center;
-  padding: 10vh 0;
+  padding: 10vh 8vw;
 }
 
 .statistics-section p {
@@ -514,6 +515,80 @@ footer .info p {
   }
 }
 
+.url-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 77vh;
+  margin: 2em 8vw;
+  width: 83vw;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+#shortened-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shortened-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.5em 0;
+  padding: 0 1em;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.shortened-links .links {
+  color: #232127;
+}
+
+.shortened-links .blue {
+  color: #2acfcf;
+}
+
+.shortened-links .shortened-links-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shortened-links .shortened-links-btn .btn-copy {
+  height: 3em;
+  width: 6em;
+  margin-left: 1em;
+  background-color: #2acfcf;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
 .url-shortner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -527,13 +602,8 @@ footer .info p {
           justify-content: space-between;
   background-color: #3b3054;
   background-image: url("../../images/bg-shorten-desktop.svg");
-  margin: 2em 8vw;
   padding: 2em;
   border-radius: 5px;
-  z-index: 10;
-  position: absolute;
-  top: 77vh;
-  width: 80vw;
 }
 
 .url-shortner input,
@@ -548,22 +618,22 @@ footer .info p {
   width: 84%;
 }
 
-.url-shortner input::-webkit-input-placeholder {
+.url-shortner input::-webkit-input-placeholder, .url-shortner input:focus {
   padding-left: 1em;
   font-weight: 500;
 }
 
-.url-shortner input:-ms-input-placeholder {
+.url-shortner input:-ms-input-placeholder, .url-shortner input:focus {
   padding-left: 1em;
   font-weight: 500;
 }
 
-.url-shortner input::-ms-input-placeholder {
+.url-shortner input::-ms-input-placeholder, .url-shortner input:focus {
   padding-left: 1em;
   font-weight: 500;
 }
 
-.url-shortner input::placeholder {
+.url-shortner input::placeholder, .url-shortner input:focus {
   padding-left: 1em;
   font-weight: 500;
 }
