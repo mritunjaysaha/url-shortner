@@ -1,4 +1,5 @@
 .nav {
+    height: 12vh;
     @include respond(mobile) {
         .nav-right {
             display: flex;

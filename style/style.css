@@ -770,6 +770,10 @@ footer .info p {
   }
 }
 
+.nav {
+  height: 12vh;
+}
+
 @media only screen and (max-width: 600px) {
   .nav .nav-right {
     display: -webkit-box;
