@@ -1,13 +1,21 @@
 .menu-mobile {
+    position: absolute;
     display: flex;
     flex-direction: column;
+
     background-color: $DarkViolet;
+
     text-align: center;
-    padding: 0 1em;
-    margin: 1em;
+
+    width: 90vw;
+    margin: 5vw;
+
     border-radius: 5px;
+
     font-size: 18px;
     color: $White;
+
+    z-index: 100;
     ul {
         display: flex;
         flex-direction: column;

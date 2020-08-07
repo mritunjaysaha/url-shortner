@@ -793,6 +793,7 @@ footer .info p {
 }
 
 .menu-mobile {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -802,11 +803,12 @@ footer .info p {
           flex-direction: column;
   background-color: #3b3054;
   text-align: center;
-  padding: 0 1em;
-  margin: 1em;
+  width: 90vw;
+  margin: 5vw;
   border-radius: 5px;
   font-size: 18px;
   color: #fff;
+  z-index: 100;
 }
 
 .menu-mobile ul {
@@ -855,7 +857,8 @@ footer .info p {
   color: #fff;
 }
 
-.mobile {
+.mobile,
+.menu-mobile {
   display: none;
 }
 
