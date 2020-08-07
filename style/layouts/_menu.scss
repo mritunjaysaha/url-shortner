@@ -1,0 +1,43 @@
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: $DarkViolet;
+    text-align: center;
+    padding: 0 1em;
+    margin: 1em;
+    border-radius: 5px;
+    font-size: 18px;
+    color: $White;
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 0;
+
+        hr {
+            width: 100%;
+            border: 1px solid $GrayishViolet;
+            opacity: 0.1;
+        }
+        li {
+            padding: 1em 0;
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        .btn-normal {
+            font-size: 18px;
+            padding: 1em 0;
+            color: $White;
+        }
+        .btn-blue {
+            font-size: 18px;
+            padding: 0.5em 0;
+            color: $White;
+        }
+    }
+}

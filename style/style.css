@@ -792,6 +792,69 @@ footer .info p {
   }
 }
 
+.menu-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #3b3054;
+  text-align: center;
+  padding: 0 1em;
+  margin: 1em;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.menu-mobile ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-mobile ul hr {
+  width: 100%;
+  border: 1px solid #9e9aa7;
+  opacity: 0.1;
+}
+
+.menu-mobile ul li {
+  padding: 1em 0;
+}
+
+.menu-mobile div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu-mobile div .btn-normal {
+  font-size: 18px;
+  padding: 1em 0;
+  color: #fff;
+}
+
+.menu-mobile div .btn-blue {
+  font-size: 18px;
+  padding: 0.5em 0;
+  color: #fff;
+}
+
 .mobile {
   display: none;
 }
