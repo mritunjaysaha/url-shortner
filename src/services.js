@@ -17,6 +17,7 @@ function UserLoginRegistration(signin, signup) {
 
 UserLoginRegistration.prototype.bindEvents = function () {
     this.signinEvents();
+    this.signupEvents();
 };
 
 UserLoginRegistration.prototype.signinEvents = function () {
@@ -36,6 +37,32 @@ UserLoginRegistration.prototype.signinEvents = function () {
             console.log(res !== true);
             if (res) {
                 window.location.href = "home.html";
+            }
+        });
+    });
+};
+
+UserLoginRegistration.prototype.signupEvents = function () {
+    this.signupEmail.addEventListener("keyup", (e) => {
+        this.email = e.target.value;
+    });
+
+    this.signupPassword.addEventListener("keyup", (e) => {
+        this.password = e.target.value;
+    });
+
+    this.signupBtn.addEventListener("click", (e) => {
+        console.log("clicked");
+        this.signup({
+            email: this.email,
+            password: this.password,
+        }).then((res) => {
+            console.log(res);
+            const { msgBody, msgError } = res.message;
+            if (msgError) {
+                console.log({ msgBody });
+            } else {
+                console.log("redirect to the login section");
             }
         });
     });
@@ -71,7 +98,6 @@ UserLoginRegistration.prototype.signin = async function (user) {
  * @param {JSON} user
  */
 UserLoginRegistration.prototype.signup = async function (user) {
-    console.log("signup");
     return await fetch(`${url}/signup`, {
         method: "post",
         body: JSON.stringify(user),
@@ -80,7 +106,13 @@ UserLoginRegistration.prototype.signup = async function (user) {
         },
     })
         .then((res) => {
-            return res.json();
+            if (status !== 400 || status !== 401) {
+                return res.json({ status });
+            } else {
+                return res.json({
+                    message: { msgBody: "Error while signin", msgError: true },
+                });
+            }
         })
         .then((data) => {
             return data;
