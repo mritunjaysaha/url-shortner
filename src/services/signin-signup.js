@@ -1,6 +1,6 @@
 const url = "http://localhost:8000";
 
-function UserLoginRegistration(signin, signup) {
+function UserSignInSignUp(signin, signup) {
     this.signinEmail = document.querySelector(signin.email);
     this.signinPassword = document.querySelector(signin.password);
     this.signinBtn = document.querySelector(signin.button);
@@ -15,12 +15,12 @@ function UserLoginRegistration(signin, signup) {
     this.bindEvents();
 }
 
-UserLoginRegistration.prototype.bindEvents = function () {
+UserSignInSignUp.prototype.bindEvents = function () {
     this.signinEvents();
     this.signupEvents();
 };
 
-UserLoginRegistration.prototype.signinEvents = function () {
+UserSignInSignUp.prototype.signinEvents = function () {
     this.signinEmail.addEventListener("keyup", (e) => {
         this.email = e.target.value;
     });
@@ -42,7 +42,7 @@ UserLoginRegistration.prototype.signinEvents = function () {
     });
 };
 
-UserLoginRegistration.prototype.signupEvents = function () {
+UserSignInSignUp.prototype.signupEvents = function () {
     this.signupEmail.addEventListener("keyup", (e) => {
         this.email = e.target.value;
     });
@@ -72,7 +72,7 @@ UserLoginRegistration.prototype.signupEvents = function () {
  * sends email and password to the signin endpoint
  * @param {JSON} user
  */
-UserLoginRegistration.prototype.signin = async function (user) {
+UserSignInSignUp.prototype.signin = async function (user) {
     return fetch(`${url}/signin`, {
         method: "post",
         body: JSON.stringify(user),
@@ -97,7 +97,7 @@ UserLoginRegistration.prototype.signin = async function (user) {
  * sends email and password to the signup endpoint
  * @param {JSON} user
  */
-UserLoginRegistration.prototype.signup = async function (user) {
+UserSignInSignUp.prototype.signup = async function (user) {
     return await fetch(`${url}/signup`, {
         method: "post",
         body: JSON.stringify(user),
@@ -119,7 +119,7 @@ UserLoginRegistration.prototype.signup = async function (user) {
         });
 };
 
-new UserLoginRegistration(
+new UserSignInSignUp(
     {
         email: "#signin-email",
         password: "#signin-password",
