@@ -1,10 +1,32 @@
 const url = "http://localhost:8000";
 
+function UserLoginRegistration(signin, signup) {
+    this.signinEmail = document.querySelector(signin.email);
+    this.signinPassword = document.querySelector(signin.password);
+    this.signinBtn = document.querySelector(signin.button);
+
+    this.signupEmail = document.querySelector(signup.email);
+    this.signupPassword = document.querySelector(signup.password);
+    this.signupBtn = document.querySelector(signup.button);
+
+    this.email = "";
+    this.password = "";
+
+    this.bindEvents();
+}
+
+UserLoginRegistration.prototype.bindEvents = function () {
+    this.signinEmail.addEventListener("keyup", (e) => {
+        this.email = e.target.value;
+        console.log(this.email);
+    });
+};
+
 /**
  * sends email and password to the signin endpoint
  * @param {JSON} user
  */
-async function signin(user) {
+UserLoginRegistration.prototype.signin = async function (user) {
     return fetch(`${url}/signin`, {
         method: "post",
         body: JSON.stringify(user),
@@ -24,13 +46,13 @@ async function signin(user) {
             }
         })
         .then((data) => data);
-}
+};
 
 /**
  * sends email and password to the signup endpoint
  * @param {JSON} user
  */
-async function signup(user) {
+UserLoginRegistration.prototype.signup = async function (user) {
     console.log("signup");
     return await fetch(`${url}/signup`, {
         method: "post",
@@ -45,30 +67,17 @@ async function signup(user) {
         .then((data) => {
             return data;
         });
-}
-
-async function signout() {
-    return await fetch(`${url}/signout`)
-        .then((res) => res.json())
-        .then((data) => data);
-}
-// signin
-const signinuser = {
-    email: "test@test.com",
-    password: "123456789",
 };
 
-signin(signinuser).then((data) => {
-    console.log({ data });
-});
-
-// const signupuser = {
-//     email: "test@google.com",
-//     password: "123456789",
-// };
-
-// signup(signupuser).then((data) => {
-//     console.log("signup", data);
-// });
-
-// signout();
+new UserLoginRegistration(
+    {
+        email: "#signin-email",
+        password: "#signin-password",
+        button: "#signin-btn",
+    },
+    {
+        email: "#signup-email",
+        password: "#signup-password",
+        button: "#signup-btn",
+    }
+);
