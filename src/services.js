@@ -18,7 +18,17 @@ function UserLoginRegistration(signin, signup) {
 UserLoginRegistration.prototype.bindEvents = function () {
     this.signinEmail.addEventListener("keyup", (e) => {
         this.email = e.target.value;
-        console.log(this.email);
+    });
+
+    this.signinPassword.addEventListener("keyup", (e) => {
+        this.password = e.target.value;
+    });
+
+    this.signinBtn.addEventListener("click", (e) => {
+        this.signin({
+            email: this.email,
+            password: this.password,
+        });
     });
 };
 
