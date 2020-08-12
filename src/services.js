@@ -9,13 +9,17 @@ function UserLoginRegistration(signin, signup) {
     this.signupPassword = document.querySelector(signup.password);
     this.signupBtn = document.querySelector(signup.button);
 
-    this.email = "";
-    this.password = "";
+    this.email = "test@test.com";
+    this.password = "123456789";
 
     this.bindEvents();
 }
 
 UserLoginRegistration.prototype.bindEvents = function () {
+    this.signinEvents();
+};
+
+UserLoginRegistration.prototype.signinEvents = function () {
     this.signinEmail.addEventListener("keyup", (e) => {
         this.email = e.target.value;
     });
@@ -28,6 +32,11 @@ UserLoginRegistration.prototype.bindEvents = function () {
         this.signin({
             email: this.email,
             password: this.password,
+        }).then((res) => {
+            console.log(res !== true);
+            if (res) {
+                window.location.href = "home.html";
+            }
         });
     });
 };
@@ -43,19 +52,18 @@ UserLoginRegistration.prototype.signin = async function (user) {
         headers: {
             "Content-Type": "application/json",
         },
-    })
-        .then((res) => {
-            const { status } = res;
-            console.log({ status });
-            if (status !== 400 || status !== 401) {
-                return res.json();
-            } else {
-                return res.json({
-                    message: { msgBody: "Error while signin", msgError: true },
-                });
-            }
-        })
-        .then((data) => data);
+    }).then((res) => {
+        const { status } = res;
+        console.log(res);
+        if (status !== 400 || status !== 401) {
+            return res.json({ status });
+        } else {
+            return res.json({
+                message: { msgBody: "Error while signin", msgError: true },
+            });
+        }
+    });
+    // .then((data) => data);
 };
 
 /**
