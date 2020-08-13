@@ -866,6 +866,8 @@ body {
 }
 
 .tabs-container {
+  background: -webkit-gradient(linear, left top, right top, from(#e3ffe7), to(#d9e7ff));
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -955,7 +957,12 @@ body {
   padding: 1em;
   margin: 1em;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #2acfcf;
+}
+
+.tab-panel .btn-blue:hover {
+  -webkit-transform: none;
+          transform: none;
 }
 
 .tab,
@@ -966,6 +973,7 @@ button {
 .selected-tab {
   color: #16161d;
   font-weight: 700;
+  border-bottom: 2px solid #2acfcf !important;
 }
 
 .mobile,

@@ -21,18 +21,17 @@ Tabs.prototype.bindEvents = function () {
             console.log("here", this.previousTab);
             this.previousTab.classList.remove("selected-tab");
 
-            selectedTab.classList.add("selected-tab");
             this.signin.style.display = "flex";
             this.signup.style.display = "none";
-            this.previousTab = selectedTab;
         } else {
             console.log("here", this.previousTab);
             this.previousTab.classList.remove("selected-tab");
-            selectedTab.classList.add("selected-tab");
+            // selectedTab.classList.add("selected-tab");
             this.signin.style.display = "none";
             this.signup.style.display = "flex";
-            this.previousTab = selectedTab;
         }
+        this.previousTab = selectedTab;
+        selectedTab.classList.add("selected-tab");
     });
 };
 
