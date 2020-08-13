@@ -895,6 +895,12 @@ body {
   width: 40vw;
 }
 
+@media only screen and (max-width: 600px) {
+  .tabs {
+    width: 90vw;
+  }
+}
+
 .tabs-tab {
   display: -webkit-box;
   display: -ms-flexbox;

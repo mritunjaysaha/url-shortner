@@ -1,15 +1,28 @@
 function UserSignOut(signout) {
     console.log(signout);
     this.signoutBtn = document.querySelector(signout.button);
-
+    this.signoutBtnMobile = document.querySelector("#signout-btn-mobile");
     console.log(this.signoutBtn);
+    console.log(this.signoutBtnMobile);
 
     this.bindEvents();
 }
 
 UserSignOut.prototype.bindEvents = function () {
-    this.signoutBtn.addEventListener("click", () => {
-        console.log("clicked");
+    this.signoutBtn.addEventListener("click", (e) => {
+        this.signout().then((res) => {
+            const { msgBody, msgError } = res.message;
+
+            if (msgError) {
+                console.log(msgBody);
+            } else {
+                console.log(msgBody);
+                window.location.href = "index.html";
+            }
+        });
+    });
+
+    this.signoutBtnMobile.addEventListener("click", (e) => {
         this.signout().then((res) => {
             const { msgBody, msgError } = res.message;
 

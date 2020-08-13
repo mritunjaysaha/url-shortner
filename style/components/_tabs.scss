@@ -14,6 +14,10 @@ body {
     display: flex;
     flex-direction: column;
     width: 40vw;
+
+    @include respond(mobile) {
+        width: 90vw;
+    }
 }
 .tabs-tab {
     display: flex;
