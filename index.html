@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style/registration.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
-    <section id="signin" class="signin">
+    <!-- <section id="signin" class="signin">
         <input id="signin-email" type="email" placeholder="Enter your email...">
         <input id="signin-password" type="text" placeholder="Enter password...">
         <button id="signin-btn">Sign in</button>
@@ -17,9 +19,32 @@
         <input id="signup-email" type="email" placeholder="Enter your email...">
         <input id="signup-password" type="text" placeholder="Enter password...">
         <button id="signup-btn">Sign up</button>
-    </section>
+    </section> -->
 
+    <section class="tabs-container">
+        <section class="tabs">
+            <section class="tabs-tab">
+                <article class="tab selected-tab" data-val="signin">Log In</article>
+                <article class="tab" data-val="signup">Sign Up</article>
+            </section>
+            <section class="tab-panel" data-val="login-tab">
+                <section id="signin" class="signin">
+                    <input id="signin-email" type="email" placeholder="Enter your email...">
+                    <input id="signin-password" type="text" placeholder="Enter password...">
+                    <button id="signin-btn" class="btn-blue">Log In</button>
+                </section>
+            </section>
+            <section class="tab-panel" data-val="signup-tab">
+                <section id="signup" class="signup" style="display: none;">
+                    <input id="signup-email" type="email" placeholder="Enter your email...">
+                    <input id="signup-password" type="text" placeholder="Enter password...">
+                    <button id="signup-btn" class="btn-blue">Sign Up</button>
+                </section>
+            </section>
+        </section>
+    </section>
     <script src="./src/services/signin-signup.js"></script>
+    <script src="./src/components/tabs.js"></script>
 </body>
 
 </html>
