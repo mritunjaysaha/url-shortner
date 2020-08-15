@@ -18,15 +18,12 @@ Tabs.prototype.bindEvents = function () {
         );
 
         if (tab === "signin") {
-            console.log("here", this.previousTab);
             this.previousTab.classList.remove("selected-tab");
-
             this.signin.style.display = "flex";
             this.signup.style.display = "none";
         } else {
             console.log("here", this.previousTab);
             this.previousTab.classList.remove("selected-tab");
-            // selectedTab.classList.add("selected-tab");
             this.signin.style.display = "none";
             this.signup.style.display = "flex";
         }

@@ -36,13 +36,21 @@ UserSignOut.prototype.bindEvents = function () {
     });
 };
 
+// UserSignOut.prototype.signout = async function () {
+//     return await fetch("http://localhost:8000/signout")
+//         .then((res) => {
+//             return res.json();
+//         })
+//         .then((data) => {
+//             return data;
+//         });
+// };
+
 UserSignOut.prototype.signout = async function () {
-    return await fetch("http://localhost:8000/signout")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            return data;
-        });
+    console.log("here");
+    const response = await fetch("http://localhost:8000/api/user");
+    const processedResponse = await response.json();
+    console.log(response);
+    console.log(processedResponse);
 };
 new UserSignOut({ button: "#signout-btn" });

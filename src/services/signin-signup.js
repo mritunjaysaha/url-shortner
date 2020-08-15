@@ -30,13 +30,16 @@ UserSignInSignUp.prototype.signinEvents = function () {
     });
 
     this.signinBtn.addEventListener("click", (e) => {
+        console.log(this.email, this.password);
         this.signin({
             email: this.email,
             password: this.password,
         }).then((res) => {
-            console.log(res !== true);
-            if (res) {
+            console.log(res, "here");
+            console.log(res.status);
+            if (res.status === 201) {
                 window.location.href = "home.html";
+                localStorage.setItem("email", this.email);
             }
         });
     });
@@ -83,9 +86,9 @@ UserSignInSignUp.prototype.signin = async function (user) {
         const { status } = res;
         console.log(res);
         if (status !== 400 || status !== 401) {
-            return res.json({ status });
+            return res;
         } else {
-            return res.json({
+            return res.status().json({
                 message: { msgBody: "Error while signin", msgError: true },
             });
         }

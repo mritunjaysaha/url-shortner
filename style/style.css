@@ -893,6 +893,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 5px 5px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -977,8 +979,8 @@ button {
 }
 
 .selected-tab {
-  color: #16161d;
-  font-weight: 700;
+  color: #fff;
+  font-weight: 500;
   border-bottom: 2px solid #2acfcf !important;
 }
 
