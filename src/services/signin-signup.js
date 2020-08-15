@@ -30,16 +30,15 @@ UserSignInSignUp.prototype.signinEvents = function () {
     });
 
     this.signinBtn.addEventListener("click", (e) => {
-        console.log(this.email, this.password);
         this.signin({
             email: this.email,
             password: this.password,
         }).then((res) => {
-            console.log(res, "here");
-            console.log(res.status);
-            if (res.status === 201) {
+            console.log(res.message.msgErr, "here");
+
+            if (res.message.msgErr === false) {
                 window.location.href = "home.html";
-                localStorage.setItem("email", this.email);
+                localStorage.setItem("id", res.id);
             }
         });
     });
@@ -76,24 +75,16 @@ UserSignInSignUp.prototype.signupEvents = function () {
  * @param {JSON} user
  */
 UserSignInSignUp.prototype.signin = async function (user) {
-    return fetch(`${url}/signin`, {
+    const res = await fetch(`${url}/signin`, {
         method: "post",
         body: JSON.stringify(user),
         headers: {
             "Content-Type": "application/json",
         },
-    }).then((res) => {
-        const { status } = res;
-        console.log(res);
-        if (status !== 400 || status !== 401) {
-            return res;
-        } else {
-            return res.status().json({
-                message: { msgBody: "Error while signin", msgError: true },
-            });
-        }
     });
-    // .then((data) => data);
+    const processedRes = await res.json();
+    console.log(processedRes);
+    return processedRes;
 };
 
 /**
