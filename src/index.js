@@ -22,21 +22,11 @@ function ShortenURL(el, inputEL, shortenBtn) {
  * @param {String} url
  */
 ShortenURL.prototype.generateLink = async function (url) {
-    const body = JSON.stringify({
-        url: url,
-    });
-    const res = await fetch("https://rel.ink/api/links/", {
-        method: "POST",
-        body,
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
-    const processedRes = await res.json();
-    const hashid = processedRes.hashid;
-    console.log(hashid);
-    this.shortenedUrl = `https://rel.ink/${hashid}`;
-
+    const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
+    const processedResponse = await response.json();
+    console.log(processedResponse.result);
+    console.log(processedResponse.result.full_short_link);
+    this.shortenedUrl = processedResponse.result.full_short_link;
     this.createComponent();
 };
 
@@ -59,8 +49,6 @@ ShortenURL.prototype.bindEvents = function () {
         if (this.copyToClipboard(link)) {
             console.log("copied");
             this.changeButtonText(linkNumber);
-        } else {
-            console.log("sahdkas");
         }
     });
 };

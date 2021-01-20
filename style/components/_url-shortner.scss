@@ -90,9 +90,10 @@
 
     input {
         width: 84%;
+        padding-left: 1em;
+
         &::placeholder,
         &:focus {
-            padding-left: 1em;
             font-weight: 500;
         }
     }

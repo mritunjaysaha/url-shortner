@@ -675,25 +675,22 @@ footer .info p {
 
 .url-shortner input {
   width: 84%;
+  padding-left: 1em;
 }
 
 .url-shortner input::-webkit-input-placeholder, .url-shortner input:focus {
-  padding-left: 1em;
   font-weight: 500;
 }
 
 .url-shortner input:-ms-input-placeholder, .url-shortner input:focus {
-  padding-left: 1em;
   font-weight: 500;
 }
 
 .url-shortner input::-ms-input-placeholder, .url-shortner input:focus {
-  padding-left: 1em;
   font-weight: 500;
 }
 
 .url-shortner input::placeholder, .url-shortner input:focus {
-  padding-left: 1em;
   font-weight: 500;
 }
 
