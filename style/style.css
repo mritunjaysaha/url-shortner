@@ -729,7 +729,7 @@ footer .info p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 8vw;
+    margin: 1em 8vw;
   }
   .url-shortner input,
   .url-shortner button {
