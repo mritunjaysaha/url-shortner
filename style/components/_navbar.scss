@@ -7,10 +7,6 @@
     padding: 0 $desktop-padding-side;
     font-size: 14px;
 
-    @include respond(mobile) {
-        padding: 1em 1em 1em 2em;
-    }
-
     .nav-left {
         width: 40%;
         display: flex;
@@ -36,7 +32,13 @@
     .desktop {
         display: none !important;
     }
-    @include respond(mobile) {
+}
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        padding: 1em 1em 1em 2em;
+        height: max-content;
+
         .nav-right {
             flex-direction: column;
             justify-content: space-between;
@@ -49,7 +51,5 @@
         .desktop {
             display: none;
         }
-
-        height: max-content;
     }
 }

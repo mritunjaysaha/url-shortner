@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
 @import "./abstract/variables";
-@import "./abstract/mixin";
 
 @import "./layouts/home";
 @import "./components/button";
@@ -18,7 +17,7 @@
     display: none;
 }
 
-@include respond(mobile) {
+@media only screen and (max-width: 600px) {
     .desktop {
         display: none;
     }

@@ -1,19 +1,5 @@
 .nav {
     height: 12vh;
-    @include respond(mobile) {
-        .nav-right {
-            display: flex;
-            flex-direction: column;
-            height: 32px;
-            align-items: center;
-            div {
-                height: 3px;
-                width: 24px;
-                border-radius: 5px;
-                background-color: $GrayishViolet;
-            }
-        }
-    }
 }
 
 .hamburger-icon {
@@ -27,4 +13,22 @@
     top: -0.8em;
     font-size: 3em;
     color: #34313d;
+}
+
+// mobile screens
+@media only screen and (max-width: 600px) {
+    .nav {
+        .nav-right {
+            display: flex;
+            flex-direction: column;
+            height: 32px;
+            align-items: center;
+            div {
+                height: 3px;
+                width: 24px;
+                border-radius: 5px;
+                background-color: $GrayishViolet;
+            }
+        }
+    }
 }

@@ -7,16 +7,6 @@
     background-position: top 0px right -200px;
 
     z-index: 0;
-
-    @include respond(mobile) {
-        margin-top: 0;
-        background-size: 120%;
-        background-position: top 20px right -100px;
-        height: max-content;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 3em;
-    }
 }
 
 .hero-section-contents {
@@ -38,17 +28,20 @@
     .btn-blue {
         letter-spacing: 0.1em;
     }
+}
 
-    @include respond(tablet) {
-        h3 {
-            font-size: 2em;
-        }
-        p {
-            margin-bottom: 1.2em;
-        }
+@media only screen and (max-width: 600px) {
+    .hero-section {
+        margin-top: 0;
+        background-size: 120%;
+        background-position: top 20px right -100px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3em;
     }
 
-    @include respond(mobile) {
+    .hero-section-contents {
         width: 100%;
         height: max-content;
         display: flex;
@@ -78,5 +71,14 @@
         .btn-blue {
             width: max-content;
         }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h3 {
+        font-size: 2em;
+    }
+    p {
+        margin-bottom: 1.2em;
     }
 }
