@@ -1,183 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+        <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
-    <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="./style/style.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <nav class="nav desktop">
-        <div class="nav-left">
-            <div class="nav-logo">
+        <nav class="nav desktop">
+            <div class="nav-left">
+                <div class="nav-logo">
+                    <img src="./images/logo.svg" alt="logo">
+                </div>
+                <button class="btn-normal">Features</button>
+                <button class="btn-normal">Pricing</button>
+                <button class="btn-normal">Resources</button>
+            </div>
+            <div class="nav-right">
+                <button id="signout-btn" class="btn-normal" data-signout="desktop">Sign Out</button>
+            </div>
+        </nav>
+
+        <nav class="nav mobile">
+            <div class="nav-left">
                 <img src="./images/logo.svg" alt="logo">
             </div>
-            <button class="btn-normal">Features</button>
-            <button class="btn-normal">Pricing</button>
-            <button class="btn-normal">Resources</button>
-        </div>
-        <div class="nav-right">
-            <button id="signout-btn" class="btn-normal" data-signout="desktop">Sign Out</button>
-        </div>
-    </nav>
-
-    <nav class="nav mobile">
-        <div class="nav-left">
-            <img src="./images/logo.svg" alt="logo">
-        </div>
-        <div id="hamburger" class="nav-right">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
-
-    <nav id="menu" class="menu-mobile">
-        <ul>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Resources</li>
-            <hr>
-            <div>
-                <button id="signout-btn-mobile" class="btn-normal" data-signout="mobile">Sign Out</button>
+            <div id="hamburger" class="nav-right">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </ul>
-    </nav>
+        </nav>
+
+        <nav id="menu" class="menu-mobile">
+            <ul>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Resources</li>
+                <hr>
+                <div>
+                    <button id="signout-btn-mobile" class="btn-normal" data-signout="mobile">Sign Out</button>
+                </div>
+            </ul>
+        </nav>
 
 
-    <section class="hero-section">
-        <div class="hero-section-contents">
-            <h3>
-                More than just shorter links
-            </h3>
-            <p>
-                Build your brand’s recognition and get detailed insights
-                on how your links are performing.
-            </p>
-            <button class="btn-blue">
-                Get Started
-            </button>
-        </div>
-
-        <div class="url-container">
-            <div class="url-shortner">
-                <input id="url-input" type="text" placeholder="Shorten a link here...">
-                <button id="shorten-btn">Shorten it!</button>
+        <section class="hero-section">
+            <div class="hero-section-contents">
+                <h3>
+                    More than just shorter links
+                </h3>
+                <p>
+                    Build your brand’s recognition and get detailed insights
+                    on how your links are performing.
+                </p>
+                <button class="btn-blue">
+                    Get Started
+                </button>
             </div>
 
-        </div>
-    </section>
-    <section class="statistics-section">
-        <div id="shortened-links-container">
-            <div class="shortened-links">
-                <p class="links">https://mritunjaysaha.netlify.app</p>
-                <div class="shortened-links-btn">
-                    <p data-link="-1" class="links blue">https://rel.ink/96y2vL</p>
-                    <button class="btn-copy" data-number="-1">Copy</button>
+            <div class="url-container">
+                <div class="url-shortner">
+                    <input id="url-input" type="text" placeholder="Shorten a link here...">
+                    <button id="shorten-btn">Shorten it!</button>
+                </div>
+
+            </div>
+        </section>
+        <section class="statistics-section">
+            <div id="shortened-links-container">
+                <div class="shortened-links">
+
                 </div>
             </div>
-        </div>
-        <div class="statistics-contents">
-            <h3>Advanced Statistics</h3>
-            <p> Track how your links are performing across the web with our
-                advanced statistics dashboard.</p>
-        </div>
-        <div class="cards-container">
-            <div class="cards-with-connector">
-                <div class="cards-1">
+            <div class="statistics-contents">
+                <h3>Advanced Statistics</h3>
+                <p> Track how your links are performing across the web with our
+                    advanced statistics dashboard.</p>
+            </div>
+            <div class="cards-container">
+                <div class="cards-with-connector">
+                    <div class="cards-1">
+                        <div class="cards-logo">
+                            <img src="./images/icon-brand-recognition.svg" class="cards-logo-img">
+                        </div>
+                        <div class="cards-contents">
+                            <h5>Brand Recognition</h5>
+                            <p>
+                                Boost your brand recognition with each click. Generic links don’t
+                                mean a thing. Branded links help instil confidence in your content.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="connector-1"></div>
+                </div>
+                <div class="cards-with-connector">
+                    <div class="cards-2">
+                        <div class="cards-logo">
+                            <img src="./images/icon-detailed-records.svg" class="cards-logo-img">
+                        </div>
+                        <div class="cards-contents">
+                            <h5>Detailed Records</h5>
+                            <p>
+                                Gain insights into who is clicking your links. Knowing when and where
+                                people engage with your content helps inform better decisions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="connector-2"></div>
+                </div>
+                <div class="cards-3">
                     <div class="cards-logo">
-                        <img src="./images/icon-brand-recognition.svg" class="cards-logo-img">
+                        <img src="./images/icon-fully-customizable.svg" class="cards-logo-img">
                     </div>
                     <div class="cards-contents">
-                        <h5>Brand Recognition</h5>
+                        <h5>Fully Customizable</h5>
                         <p>
-                            Boost your brand recognition with each click. Generic links don’t
-                            mean a thing. Branded links help instil confidence in your content.
+                            Improve brand awareness and content discoverability through customizable
+                            links, supercharging audience engagement.
                         </p>
                     </div>
                 </div>
-                <div class="connector-1"></div>
             </div>
-            <div class="cards-with-connector">
-                <div class="cards-2">
-                    <div class="cards-logo">
-                        <img src="./images/icon-detailed-records.svg" class="cards-logo-img">
-                    </div>
-                    <div class="cards-contents">
-                        <h5>Detailed Records</h5>
-                        <p>
-                            Gain insights into who is clicking your links. Knowing when and where
-                            people engage with your content helps inform better decisions.
-                        </p>
-                    </div>
-                </div>
-                <div class="connector-2"></div>
+        </section>
+        <section class="boost-section">
+            <h3>Boost your links today</h3>
+            <button class="btn-blue">Get Started</button>
+        </section>
+        <footer>
+            <div class="logo">
+                <h2>Shortly</h2>
             </div>
-            <div class="cards-3">
-                <div class="cards-logo">
-                    <img src="./images/icon-fully-customizable.svg" class="cards-logo-img">
-                </div>
-                <div class="cards-contents">
-                    <h5>Fully Customizable</h5>
-                    <p>
-                        Improve brand awareness and content discoverability through customizable
-                        links, supercharging audience engagement.
-                    </p>
-                </div>
+            <div class="info">
+                <h5>Features</h5>
+
+                <p>Link Shortening</p>
+                <p>Branded Links</p>
+                <p>Analytics</p>
             </div>
-        </div>
-    </section>
-    <section class="boost-section">
-        <h3>Boost your links today</h3>
-        <button class="btn-blue">Get Started</button>
-    </section>
-    <footer>
-        <div class="logo">
-            <h2>Shortly</h2>
-        </div>
-        <div class="info">
-            <h5>Features</h5>
+            <div class="info">
+                <h5>Resources</h5>
 
-            <p>Link Shortening</p>
-            <p>Branded Links</p>
-            <p>Analytics</p>
-        </div>
-        <div class="info">
-            <h5>Resources</h5>
+                <p>Blog</p>
+                <p>Developers</p>
+                <p>Support</p>
+            </div>
+            <div class="info">
+                <h5>Company</h5>
 
-            <p>Blog</p>
-            <p>Developers</p>
-            <p>Support</p>
-        </div>
-        <div class="info">
-            <h5>Company</h5>
+                <p>About</p>
+                <p>Our Team</p>
+                <p>Careers</p>
+                <p>Contact</p>
+            </div>
+            <div class="social-logos">
+                <img src="./images/icon-facebook.svg" alt="">
+                <img src="./images/icon-instagram.svg" alt="">
+                <img src="./images/icon-pinterest.svg" alt="">
+                <img src="./images/icon-twitter.svg" alt="">
+            </div>
+        </footer>
 
-            <p>About</p>
-            <p>Our Team</p>
-            <p>Careers</p>
-            <p>Contact</p>
-        </div>
-        <div class="social-logos">
-            <img src="./images/icon-facebook.svg" alt="">
-            <img src="./images/icon-instagram.svg" alt="">
-            <img src="./images/icon-pinterest.svg" alt="">
-            <img src="./images/icon-twitter.svg" alt="">
-        </div>
-    </footer>
-
-    <script src="./src/index.js"></script>
-    <script src="./src/menu.js"></script>
-    <script src="./src/services/sign-out.js"></script>
-    <script src="./src/services/link.js"></script>
-</body>
+        <script src="./src/index.js"></script>
+        <script src="./src/menu.js"></script>
+        <script src="./src/services/sign-out.js"></script>
+        <script src="./src/services/link.js"></script>
+    </body>
 
 
 </html>
