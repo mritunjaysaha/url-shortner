@@ -136,6 +136,19 @@ button {
     height: -moz-max-content;
     height: max-content;
   }
+  .nav .nav-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 0.1em;
+  }
+  .nav .nav-right div {
+    height: 0.2em;
+  }
   .nav .desktop {
     display: none;
   }
@@ -792,6 +805,19 @@ footer .info p {
     border-radius: 5px;
     background-color: #9e9aa7;
   }
+}
+
+.hamburger-icon {
+  height: 2.5em;
+}
+
+.menu-close-icon {
+  display: none;
+  position: absolute;
+  margin-right: 1em;
+  top: -0.8em;
+  font-size: 3em;
+  color: #34313d;
 }
 
 .menu-mobile {

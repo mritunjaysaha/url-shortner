@@ -37,6 +37,15 @@
         display: none !important;
     }
     @include respond(mobile) {
+        .nav-right {
+            flex-direction: column;
+            justify-content: space-between;
+            height: 0.1em;
+            div {
+                height: 0.2em;
+            }
+        }
+
         .desktop {
             display: none;
         }
