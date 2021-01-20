@@ -79,6 +79,7 @@
     background-color: $DarkViolet;
     background-image: url("../../images/bg-shorten-desktop.svg");
     padding: 2em;
+    margin: 1em 0;
     border-radius: 5px;
     input,
     button {
@@ -103,6 +104,10 @@
         padding: 0 1em;
         background-color: $Cyan;
         color: #fff;
+    }
+
+    @include respond(tablet) {
+        margin: 4em;
     }
 
     @include respond(mobile) {

@@ -27,11 +27,12 @@
     h3 {
         font-size: 4em;
         line-height: 1.2em;
+        margin-bottom: 0;
     }
     p {
-        margin-top: -10vh;
         line-height: 2em;
         letter-spacing: 0.1em;
+        margin-bottom: 1.8em;
     }
 
     .btn-blue {
@@ -39,8 +40,12 @@
     }
 
     @include respond(tablet) {
-        padding-top: 40vh;
-        background-color: #f00;
+        h3 {
+            font-size: 2em;
+        }
+        p {
+            margin-bottom: 1.2em;
+        }
     }
 
     @include respond(mobile) {

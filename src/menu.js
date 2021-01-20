@@ -4,7 +4,6 @@ function Menu(el, button, icon, close) {
     this.hamburgerMenuIcon = document.querySelector(icon);
     this.closeIcon = document.querySelector(close);
     this.displayMenu = false;
-    console.log(this.hamburgerMenuIcon, this.closeIcon);
     this.bindEvents();
 }
 
