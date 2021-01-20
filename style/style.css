@@ -240,10 +240,10 @@ button {
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
+  .hero-section-contents h3 {
     font-size: 2em;
   }
-  p {
+  .hero-section-contents p {
     margin-bottom: 1.2em;
   }
 }
@@ -415,13 +415,7 @@ button {
   }
   .statistics-section .cards-container .connector-1,
   .statistics-section .cards-container .connector-2 {
-    position: relative;
-    top: -4px;
-    margin: 0 auto;
-    width: 4em;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    z-index: 0;
+    display: none;
   }
   .statistics-section .cards-container .cards-1,
   .statistics-section .cards-container .cards-2,
@@ -681,36 +675,36 @@ footer .info p {
   border-radius: 5px;
 }
 
-.url-shortner input,
-.url-shortner button {
+.url-shortner #url-input,
+.url-shortner #shorten-btn {
   height: 3em;
   border-radius: 5px;
   margin: 0;
   border: none;
 }
 
-.url-shortner input {
+.url-shortner #url-input {
   width: 84%;
   padding-left: 1em;
 }
 
-.url-shortner input::-webkit-input-placeholder, .url-shortner input:focus {
+.url-shortner #url-input::-webkit-input-placeholder, .url-shortner #url-input:focus {
   font-weight: 500;
 }
 
-.url-shortner input:-ms-input-placeholder, .url-shortner input:focus {
+.url-shortner #url-input:-ms-input-placeholder, .url-shortner #url-input:focus {
   font-weight: 500;
 }
 
-.url-shortner input::-ms-input-placeholder, .url-shortner input:focus {
+.url-shortner #url-input::-ms-input-placeholder, .url-shortner #url-input:focus {
   font-weight: 500;
 }
 
-.url-shortner input::placeholder, .url-shortner input:focus {
+.url-shortner #url-input::placeholder, .url-shortner #url-input:focus {
   font-weight: 500;
 }
 
-.url-shortner button {
+.url-shortner #shorten-btn {
   width: 14%;
   padding: 0 1em;
   background-color: #2acfcf;
@@ -720,6 +714,8 @@ footer .info p {
 @media only screen and (max-width: 600px) {
   .url-container {
     position: absolute;
+  }
+  .url-shortner {
     width: 100%;
     margin: 2em 0;
   }
@@ -730,7 +726,6 @@ footer .info p {
             flex-direction: column;
     padding: 0 1em;
     text-align: left;
-    top: 80vh;
   }
   .shortened-links .links {
     min-width: 100%;
@@ -753,6 +748,7 @@ footer .info p {
     border-bottom: none;
   }
   .shortened-links .shortened-links-btn .btn-copy {
+    color: #f00;
     margin-left: 0;
     width: 100%;
   }
@@ -782,8 +778,47 @@ footer .info p {
 }
 
 @media only screen and (max-width: 1000px) {
+  .url-container {
+    top: 74vh;
+  }
   .url-shortner {
-    margin: 4em;
+    margin: 0;
+    padding: 2em;
+  }
+  .url-shortner #url-input {
+    width: 75%;
+  }
+  .url-shortner #shorten-btn {
+    width: 20%;
+  }
+  .shortened-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 1em;
+    text-align: left;
+    width: 99%;
+  }
+  .shortened-links .links {
+    border-bottom: 2px solid #d9d9d9;
+    padding: 1em 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  .shortened-links .shortened-links-btn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-bottom: 1em;
+  }
+  .shortened-links .shortened-links-btn .links .blue {
+    border-bottom: none;
+  }
+  .shortened-links .shortened-links-btn .btn-copy {
+    margin-left: 2em;
+    width: 8em;
   }
 }
 

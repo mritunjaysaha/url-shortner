@@ -118,12 +118,7 @@
             }
             .connector-1,
             .connector-2 {
-                position: relative;
-                top: -4px;
-                margin: 0 auto;
-                width: 4em;
-                transform: rotate(90deg);
-                z-index: 0;
+                display: none;
             }
             .cards-1,
             .cards-2,
