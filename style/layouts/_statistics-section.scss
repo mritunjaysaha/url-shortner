@@ -1,9 +1,7 @@
 .statistics-section {
     position: relative;
-    height: max-content;
     background-color: $Gray;
-    text-align: center;
-    padding: 10vh $desktop-padding-side;
+    padding: 0 $desktop-padding-side 6rem $desktop-padding-side;
 
     p {
         color: $GrayishViolet;
@@ -102,7 +100,7 @@
 
         .cards-logo {
             position: relative;
-            margin: 0 auto;
+            margin: 1rem auto 0 auto;
         }
 
         .cards-container {
@@ -125,12 +123,14 @@
             .cards-3 {
                 width: 90%;
                 margin: 2em 1em;
+                padding: 0 1rem;
                 border-radius: 5px;
                 z-index: 10;
                 .cards-contents {
                     text-align: center;
                     h5 {
                         font-size: 18px;
+                        line-height: 1rem;
                     }
                     p {
                         font-size: 16px;

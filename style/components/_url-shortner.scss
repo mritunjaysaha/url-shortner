@@ -1,13 +1,47 @@
 .url-container {
-    position: absolute;
+    position: relative;
+    top: -4rem;
     display: flex;
     flex-direction: column;
-    top: 77vh;
-
-    margin: 2em $desktop-padding-side;
-    width: 83vw;
+    margin: 0 $desktop-padding-side;
     border-radius: 5px;
-    z-index: 10;
+    z-index: 100;
+}
+
+.url-shortner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $DarkViolet;
+    background-image: url("../../images/bg-shorten-desktop.svg");
+    padding: 2em;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+
+    #url-input,
+    #shorten-btn {
+        height: 3em;
+        border-radius: 5px;
+        margin: 0;
+        border: none;
+    }
+
+    #url-input {
+        width: 84%;
+        padding-left: 1em;
+
+        &::placeholder,
+        &:focus {
+            font-weight: 500;
+        }
+    }
+
+    #shorten-btn {
+        width: 14%;
+        padding: 0 1em;
+        background-color: $Cyan;
+        color: #fff;
+    }
 }
 
 #shortened-links-container {
@@ -23,6 +57,7 @@
     padding: 0 1em;
     background-color: #fff;
     border-radius: 5px;
+    width: 100%;
 
     .links {
         color: $VeryDarkViolet;
@@ -72,44 +107,9 @@
     }
 }
 
-.url-shortner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: $DarkViolet;
-    background-image: url("../../images/bg-shorten-desktop.svg");
-    padding: 2em;
-    margin: 1em 0;
-    border-radius: 5px;
-    #url-input,
-    #shorten-btn {
-        height: 3em;
-        border-radius: 5px;
-        margin: 0;
-        border: none;
-    }
-
-    #url-input {
-        width: 84%;
-        padding-left: 1em;
-
-        &::placeholder,
-        &:focus {
-            font-weight: 500;
-        }
-    }
-
-    #shorten-btn {
-        width: 14%;
-        padding: 0 1em;
-        background-color: $Cyan;
-        color: #fff;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
     .url-container {
-        top: 74vh;
+        top: -2rem;
     }
     .url-shortner {
         margin: 0;
@@ -151,12 +151,13 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .url-container {
+        top: -4rem;
+    }
+
     .url-shortner {
-        position: absolute;
-        top: 26vh;
         flex-direction: column;
-        width: 100%;
-        padding: 1.8em;
+        margin-bottom: 0.5rem;
 
         #url-input {
             width: 100%;
@@ -168,9 +169,6 @@
         }
     }
     .shortened-links {
-        &:nth-child(1) {
-            margin-top: 4em;
-        }
         .links {
             overflow: hidden;
         }

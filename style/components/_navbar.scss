@@ -24,7 +24,6 @@
     padding: 0;
     li {
         list-style: none;
-        font-weight: bold;
         &:nth-of-type(1) {
             padding-left: 0;
             padding-right: 2rem;
@@ -134,7 +133,12 @@
 @media only screen and (max-width: 767px) {
     .navbar-header {
         height: auto;
-        margin: 1.5rem;
+        margin: 1.5rem 2rem;
+
+        .logo {
+            margin: 0;
+            padding: 0;
+        }
 
         .open {
             display: block;
