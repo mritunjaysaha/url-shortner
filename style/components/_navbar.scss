@@ -7,14 +7,6 @@
     }
 }
 
-.nav {
-    visibility: hidden;
-}
-
-.open-nav {
-    visibility: unset;
-}
-
 @media only screen and (max-width: 1000px) {
     .navbar-header {
         flex-direction: row;
@@ -38,8 +30,11 @@
 
     .nav {
         position: absolute;
+        visibility: hidden;
         top: 12vh;
-
+        transform: translateX(0%);
+        opacity: 0;
+        transition: 0.3s all;
         ul {
             background-color: $DarkViolet;
             display: flex;
@@ -75,6 +70,12 @@
                 padding: 0.5rem 0;
             }
         }
+    }
+
+    .open-nav {
+        visibility: unset;
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 

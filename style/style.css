@@ -76,14 +76,6 @@ button {
   width: 2rem;
 }
 
-.nav {
-  visibility: hidden;
-}
-
-.open-nav {
-  visibility: unset;
-}
-
 @media only screen and (max-width: 1000px) {
   .navbar-header {
     -webkit-box-orient: horizontal;
@@ -109,7 +101,13 @@ button {
   }
   .nav {
     position: absolute;
+    visibility: hidden;
     top: 12vh;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
   }
   .nav ul {
     background-color: #3b3054;
@@ -148,6 +146,12 @@ button {
     font-weight: bold;
     font-size: 1rem;
     padding: 0.5rem 0;
+  }
+  .open-nav {
+    visibility: unset;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
