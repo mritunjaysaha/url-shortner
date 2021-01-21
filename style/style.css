@@ -76,6 +76,14 @@ button {
   width: 2rem;
 }
 
+.nav {
+  visibility: hidden;
+}
+
+.open-nav {
+  visibility: unset;
+}
+
 @media only screen and (max-width: 1000px) {
   .navbar-header {
     -webkit-box-orient: horizontal;
@@ -94,12 +102,16 @@ button {
     height: 2em;
     margin: -0.2em -0.8em 0 0;
   }
-  #nav {
-    visibility: hidden;
+  .exit {
+    display: none;
+    color: red;
+    height: 2rem;
+  }
+  .nav {
     position: absolute;
     top: 12vh;
   }
-  #nav ul {
+  .nav ul {
     background-color: #3b3054;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -117,28 +129,25 @@ button {
     border-radius: 0.5rem;
     font-size: 1rem;
   }
-  #nav ul li {
+  .nav ul li {
     list-style: none;
     padding: 1rem 0;
     font-weight: bold;
   }
-  #nav ul li a {
+  .nav ul li a {
     text-decoration: none;
     color: #fff;
   }
-  #nav ul li:nth-of-type(1) {
+  .nav ul li:nth-of-type(1) {
     padding-top: 0;
   }
-  #nav ul li:nth-of-type(3) {
+  .nav ul li:nth-of-type(3) {
     border-bottom: 1px solid #9e9aa7;
   }
-  #nav ul .btn-blue {
+  .nav ul .btn-blue {
     font-weight: bold;
     font-size: 1rem;
     padding: 0.5rem 0;
-  }
-  .exit {
-    display: none;
   }
 }
 
