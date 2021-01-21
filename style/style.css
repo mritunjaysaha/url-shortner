@@ -69,11 +69,63 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1rem 8vw 0 8vw;
 }
 
 .navbar-header .logo {
-  height: 1rem;
-  width: 2rem;
+  width: auto;
+  padding-top: 0.5rem;
+  padding-right: 2rem;
+}
+
+.nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 !important;
+  padding: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.nav-ul li {
+  list-style: none;
+  font-weight: bold;
+}
+
+.nav-ul li:nth-of-type(1) {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+.nav-ul li:nth-of-type(2), .nav-ul li:nth-of-type(3) {
+  padding: 0 2rem;
+}
+
+.nav-ul li a {
+  text-decoration: none;
+  color: #9e9aa7;
+}
+
+.open,
+.exit,
+.nav {
+  display: none;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -90,20 +142,28 @@ button {
     margin: 1.5rem;
   }
   .open {
+    display: block;
     position: relative;
     height: 2em;
-    margin: -0.2em -0.8em 0 0;
+    margin: 0 -0.8em 0 0;
   }
   .exit {
     display: none;
     height: 2rem;
   }
+  .desktop-nav {
+    display: none;
+  }
+  .logo {
+    padding: 0;
+  }
   .nav {
+    display: block;
     position: absolute;
     visibility: unset;
     top: 12vh;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
     opacity: 0;
     -webkit-transition: 0.3s all;
     transition: 0.3s all;
