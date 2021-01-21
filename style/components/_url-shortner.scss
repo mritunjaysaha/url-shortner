@@ -137,9 +137,9 @@
 
         .shortened-links-btn {
             flex-direction: row;
-            padding-bottom: 1em;
+            padding: 0.5rem 0;
 
-            .links .blue {
+            .links {
                 border-bottom: none;
             }
             .btn-copy {
@@ -168,9 +168,24 @@
             margin-bottom: 0;
         }
     }
+
     .shortened-links {
-        .links {
+        align-items: flex-start;
+
+        p {
+            width: 100%;
             overflow: hidden;
+        }
+        .shortened-links-btn {
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+            // padding: 0;
+            align-items: flex-start;
+            .btn-copy {
+                width: 100%;
+                margin: 0 0 0.5rem 0;
+            }
         }
     }
 }

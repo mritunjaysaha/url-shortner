@@ -843,9 +843,9 @@ footer .info p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-bottom: 1em;
+    padding: 0.5rem 0;
   }
-  .shortened-links .shortened-links-btn .links .blue {
+  .shortened-links .shortened-links-btn .links {
     border-bottom: none;
   }
   .shortened-links .shortened-links-btn .btn-copy {
@@ -873,8 +873,29 @@ footer .info p {
     width: 100%;
     margin-bottom: 0;
   }
-  .shortened-links .links {
+  .shortened-links {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .shortened-links p {
+    width: 100%;
     overflow: hidden;
+  }
+  .shortened-links .shortened-links-btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .shortened-links .shortened-links-btn .btn-copy {
+    width: 100%;
+    margin: 0 0 0.5rem 0;
   }
 }
 
