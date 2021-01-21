@@ -24,13 +24,12 @@
 
     .exit {
         display: none;
-        color: red;
         height: 2rem;
     }
 
     .nav {
         position: absolute;
-        visibility: hidden;
+        visibility: unset;
         top: 12vh;
         transform: translateX(0%);
         opacity: 0;
@@ -61,6 +60,10 @@
                 }
                 &:nth-of-type(3) {
                     border-bottom: 1px solid $GrayishViolet;
+                    padding-bottom: 2rem;
+                }
+                &:nth-of-type(4) {
+                    padding: 1.5rem 0;
                 }
             }
 

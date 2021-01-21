@@ -96,12 +96,11 @@ button {
   }
   .exit {
     display: none;
-    color: red;
     height: 2rem;
   }
   .nav {
     position: absolute;
-    visibility: hidden;
+    visibility: unset;
     top: 12vh;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -141,6 +140,10 @@ button {
   }
   .nav ul li:nth-of-type(3) {
     border-bottom: 1px solid #9e9aa7;
+    padding-bottom: 2rem;
+  }
+  .nav ul li:nth-of-type(4) {
+    padding: 1.5rem 0;
   }
   .nav ul .btn-blue {
     font-weight: bold;
