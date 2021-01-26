@@ -11,6 +11,15 @@
 @import "./layouts/footer";
 @import "./components/url-shortner";
 @import "./layouts/menu";
+@import "./components/loading-animation";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
 .mobile,
 .menu-mobile {
     display: none;
