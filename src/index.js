@@ -13,6 +13,7 @@ function ShortenURL(el, inputEL, shortenBtn) {
     this.btnNumber = 0;
     this.url = "";
     this.shortenedUrl = "";
+    this.startSpinner = false;
 
     this.bindEvents();
 }
@@ -28,6 +29,12 @@ ShortenURL.prototype.generateLink = async function (url) {
     console.log(processedResponse.result.full_short_link);
     this.shortenedUrl = processedResponse.result.full_short_link;
     this.createComponent();
+
+    // if (this.shortenedUrl !== "") {
+    //     this.stopAnimation();
+    // }
+
+    this.shortenedUrl = "";
 };
 
 ShortenURL.prototype.bindEvents = function () {
@@ -37,6 +44,7 @@ ShortenURL.prototype.bindEvents = function () {
     });
 
     this.shortenBtn.addEventListener("click", (e) => {
+        // this.startAnimation();
         this.generateLink(this.url);
     });
 
