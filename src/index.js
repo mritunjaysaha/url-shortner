@@ -28,6 +28,7 @@ ShortenURL.prototype.startAnimation = function () {
 ShortenURL.prototype.stopAnimation = function () {
     this.shortenBtnP.style.display = "block";
     this.spinnerContainer.style.display = "none";
+    this.input.reset();
 };
 
 /**
@@ -52,11 +53,17 @@ ShortenURL.prototype.generateLink = async function (url) {
 ShortenURL.prototype.bindEvents = function () {
     this.input.addEventListener("input", (e) => {
         this.url = e.target.value;
+
         console.log(this.url);
     });
 
     this.shortenBtn.addEventListener("click", (e) => {
-        this.startAnimation();
+        if (this.url !== "") {
+            this.startSpinner = true;
+        }
+        if (this.startSpinner) {
+            this.startAnimation();
+        }
         this.generateLink(this.url);
     });
 

@@ -664,6 +664,13 @@ footer .info p {
   margin: 0.5rem 0;
 }
 
+.url-shortner .input-form {
+  display: block;
+  width: 100%;
+  margin-right: 2em;
+  padding: 0;
+}
+
 .url-shortner #url-input,
 .url-shortner #shorten-btn {
   height: 3em;
@@ -673,7 +680,7 @@ footer .info p {
 }
 
 .url-shortner #url-input {
-  width: 84%;
+  width: 100%;
   padding-left: 1em;
 }
 
@@ -703,7 +710,7 @@ footer .info p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 10em;
+  width: 20%;
 }
 
 .url-shortner #shorten-btn #shorten-btn-p {
@@ -837,9 +844,6 @@ footer .info p {
   .url-shortner {
     margin: 0;
     padding: 2em;
-  }
-  .url-shortner #url-input {
-    width: 75%;
   }
   .url-shortner #shorten-btn {
     width: 20%;
