@@ -78,7 +78,22 @@
             <div class="url-container">
                 <label for="url-input" class="url-shortner">
                     <input name="input-url" id="url-input" type="text" placeholder="Shorten a link here...">
-                    <button id="shorten-btn">Shorten it!</button>
+                    <button id="shorten-btn" class="btn-blue">
+                        <p id="shorten-btn-p">Shorten it!</p>
+                        <span>
+                            <div class="spinner-container">
+                                <div class="sk-chase">
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                </div>
+                            </div>
+                        </span>
+
+                    </button>
                 </label>
                 <div id="shortened-links-container">
                 </div>
@@ -172,16 +187,6 @@
             </div>
         </footer>
 
-        <div class="spinner-container">
-            <div class="sk-chase">
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-            </div>
-        </div>
 
         <script src="./src/index.js"></script>
         <script src="./src/menu.js"></script>

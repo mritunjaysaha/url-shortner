@@ -202,7 +202,7 @@ button {
   }
   .navbar-header .nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #eaeaea;
   }
   .navbar-header .nav ul li:nth-of-type(1) {
     padding-top: 0;
@@ -592,7 +592,7 @@ footer img {
 }
 
 footer .logo {
-  color: #fff;
+  color: #eaeaea;
 }
 
 footer .social-logos {
@@ -607,7 +607,7 @@ footer .social-logos img {
 }
 
 footer .info h5 {
-  color: #fff;
+  color: #eaeaea;
   padding: 1em 0;
 }
 
@@ -694,8 +694,22 @@ footer .info p {
 }
 
 .url-shortner #shorten-btn {
-  width: 14%;
-  padding: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10em;
+}
+
+.url-shortner #shorten-btn #shorten-btn-p {
+  display: block;
+  margin: 0;
+  padding: 0;
   background-color: #2acfcf;
   color: #fff;
 }
@@ -921,7 +935,7 @@ footer .info p {
   margin: 5vw;
   border-radius: 5px;
   font-size: 18px;
-  color: #fff;
+  color: #eaeaea;
   z-index: 100;
 }
 
@@ -962,34 +976,23 @@ footer .info p {
 .menu-mobile div .btn-normal {
   font-size: 18px;
   padding: 1em 0;
-  color: #fff;
+  color: #eaeaea;
 }
 
 .menu-mobile div .btn-blue {
   font-size: 18px;
   padding: 0.5em 0;
-  color: #fff;
+  color: #eaeaea;
 }
 
 .spinner-container {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .sk-chase {
-  width: 40px;
-  height: 40px;
+  width: 1.5em;
+  height: 1.5em;
   position: relative;
   -webkit-animation: sk-chase 2.5s infinite linear both;
           animation: sk-chase 2.5s infinite linear both;
@@ -1011,7 +1014,7 @@ footer .info p {
   display: block;
   width: 25%;
   height: 25%;
-  background-color: #3b3054;
+  background-color: #eaeaea;
   border-radius: 100%;
   -webkit-animation: sk-chase-dot-before 2s infinite ease-in-out both;
           animation: sk-chase-dot-before 2s infinite ease-in-out both;

@@ -5,10 +5,12 @@
  * @param {id} shortenBtn button to generate the shorten link
  */
 
-function ShortenURL(el, inputEL, shortenBtn) {
+function ShortenURL(el, inputEL, shortenBtn, shortenBtnP, spinnerContainer) {
     this.el = document.querySelector(el);
     this.input = document.querySelector(inputEL);
     this.shortenBtn = document.querySelector(shortenBtn);
+    this.shortenBtnP = document.querySelector(shortenBtnP);
+    this.spinnerContainer = document.querySelector(spinnerContainer);
 
     this.btnNumber = 0;
     this.url = "";
@@ -17,6 +19,16 @@ function ShortenURL(el, inputEL, shortenBtn) {
 
     this.bindEvents();
 }
+
+ShortenURL.prototype.startAnimation = function () {
+    this.shortenBtnP.style.display = "none";
+    this.spinnerContainer.style.display = "block";
+};
+
+ShortenURL.prototype.stopAnimation = function () {
+    this.shortenBtnP.style.display = "block";
+    this.spinnerContainer.style.display = "none";
+};
 
 /**
  *
@@ -30,9 +42,9 @@ ShortenURL.prototype.generateLink = async function (url) {
     this.shortenedUrl = processedResponse.result.full_short_link;
     this.createComponent();
 
-    // if (this.shortenedUrl !== "") {
-    //     this.stopAnimation();
-    // }
+    if (this.shortenedUrl !== "") {
+        this.stopAnimation();
+    }
 
     this.shortenedUrl = "";
 };
@@ -44,7 +56,7 @@ ShortenURL.prototype.bindEvents = function () {
     });
 
     this.shortenBtn.addEventListener("click", (e) => {
-        // this.startAnimation();
+        this.startAnimation();
         this.generateLink(this.url);
     });
 
@@ -124,4 +136,10 @@ ShortenURL.prototype.createComponent = function () {
     this.el.appendChild(container);
 };
 
-new ShortenURL("#shortened-links-container", "#url-input", "#shorten-btn");
+new ShortenURL(
+    "#shortened-links-container",
+    "#url-input",
+    "#shorten-btn",
+    "#shorten-btn-p",
+    ".spinner-container"
+);
